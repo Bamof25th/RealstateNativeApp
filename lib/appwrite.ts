@@ -3,8 +3,8 @@ import * as Linking from "expo-linking";
 import { openAuthSessionAsync } from "expo-web-browser";
 export const config = {
   platform: "com.bam.elstate",
-  endpoint: "process.env.REACT_APP_ENDPOINT",
-  projectId: "process.env.REACT_APP_PROJECT",
+  endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
+  projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
 };
 
 export const client = new Client();
@@ -55,7 +55,7 @@ export async function logout() {
   }
 }
 
-export async function getUser() {
+export async function getCurrentUser() {
   try {
     const user = await account.get();
     if (user.$id) {
