@@ -1,3 +1,4 @@
+import { Cards, FeaturedCards } from "@/components/Cards";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
@@ -37,6 +38,10 @@ export default function Index() {
             </TouchableOpacity>
           </View>
         </View>
+      </View>
+      <View className="my-5 px-5">
+        <FeaturedCards />
+        <Cards />
       </View>
     </SafeAreaView>
   );
