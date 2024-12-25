@@ -10,13 +10,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="font-bold font-rubik text-red-400   text-2xl">
+      <Text className="font-bold font-rubik text-primary-300   text-2xl">
         Welcome to RealState
       </Text>
-      <Link href={"/sign-in"}>Sign-In</Link>
-      <Link href={"/explore"}>Explore</Link>
-      <Link href={"/profile"}>Profile</Link>
-      <Link href={"/properties/1"}>Property</Link>
+
     </View>
   );
 }
