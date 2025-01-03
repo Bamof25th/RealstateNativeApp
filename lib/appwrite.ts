@@ -27,7 +27,7 @@ client.setEndpoint(config.endpoint!).setProject(config.projectId!);
 
 export const avatar = new Avatars(client);
 export const account = new Account(client);
-export const database = new Databases(client);
+export const databases = new Databases(client);
 
 export async function login() {
   try {

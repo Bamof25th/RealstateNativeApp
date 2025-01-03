@@ -3,10 +3,11 @@ import Filters from "@/components/Filters";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
 import { useGlobalContext } from "@/lib/globalProvider";
+import seed from "@/lib/seed";
 import {
+  Button,
   FlatList,
   Image,
-  ScrollView,
   Text,
   TouchableOpacity,
   View,
@@ -18,6 +19,7 @@ export default function Index() {
 
   return (
     <SafeAreaView className="h-full  bg-white">
+      <Button title="seed" onPress={seed} />
       <FlatList
         data={[1, 2, 3, 4]}
         renderItem={({ item }) => <Cards />}
