@@ -21,7 +21,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Index() {
   const { user } = useGlobalContext();
 
-  const params = useLocalSearchParams<{ query?: string; filter?: string }>();
+  const params = useLocalSearchParams<{ query?: string; filter?: string}>();
 
   const { data: latestProperties, loading: latestPropertiesLoading } =
     useAppwrite({
@@ -30,8 +30,8 @@ export default function Index() {
 
   const {
     data: properties,
-    loading,
     refetch,
+    loading,
   } = useAppwrite({
     fn: getProperties,
     params: {
